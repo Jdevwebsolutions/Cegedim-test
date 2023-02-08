@@ -5,6 +5,7 @@ import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import { FontAwesome } from "@expo/vector-icons";
 import Home from "../screens/Home";
 import Page from "../screens/Page";
+import PharmacyDetails from "../screens/PharmacyDetails";
 import { colors } from "../styles/colors";
 
 const Router = () => {
@@ -23,6 +24,11 @@ const RootNavigator = () => {
       <Stack.Screen
         name="Root"
         component={BottomTabNavigator}
+        options={{ headerShown: false }}
+      />
+      <Stack.Screen
+        name="PharmacyDetailsModal"
+        component={PharmacyDetails}
         options={{ headerShown: false }}
       />
     </Stack.Navigator>
